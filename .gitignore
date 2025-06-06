@@ -1,0 +1,8 @@
+.env/
+data/
+tmp/
+PIQN/ace2004
+PIQN/genia
+PIQN/glove
+**/__pycache__/
+common/__pycache__

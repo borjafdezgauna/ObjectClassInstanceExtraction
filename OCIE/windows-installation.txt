@@ -1,0 +1,20 @@
+install python 3.11
+install cuda 11.7
+
+python -m venv windows-env
+windows-env\Scripts\activate
+pip install -U pip setuptools wheel
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install -U spacy[cuda-117,transformers,lookups]
+pip install -U spacy[cuda-118,transformers,lookups]
+pip install cupy-cuda11x
+
+
+to update all packages:
+pip install pip-review
+pip-review --local --interactive
+pip-review --local --auto
+
+to install/update from requirements.txt file:
+pip install -r requirements.txt

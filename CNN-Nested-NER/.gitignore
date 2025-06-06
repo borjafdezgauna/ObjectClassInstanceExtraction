@@ -1,0 +1,11 @@
+__pycache__/
+logs/
+*.jsonlines
+.env/
+preprocess/
+**/__pycache__/
+**/splits/
+caches/
+models/
+certificates/
+cvs/

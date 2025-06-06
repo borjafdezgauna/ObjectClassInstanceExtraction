@@ -1,0 +1,1 @@
+sc.exe create XerkariakNerService start=auto binpath=%~dp0\run-server.bat displayname="Xerkariak NER Service"

@@ -1,0 +1,75 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Init PIQN: download data from Zenodo",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "piqn.py",
+            "console": "integratedTerminal",
+            "args": [
+                "download"
+            ]
+        },
+        {
+            "name": "Init PIQN: preprocess data",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "piqn.py",
+            "console": "integratedTerminal",
+            "args": [ "preprocess" ]
+        },
+        {
+            "name": "Train PIQN: all nested",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "piqn.py",
+            "console": "integratedTerminal",
+            "args": [ "train", "--config", "configs/nested.conf.all" ]
+        },
+        {
+            "name": "Train PIQN: CVs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "piqn.py",
+            "console": "integratedTerminal",
+            "args": [ "train", "--config", "configs/cvs.conf" ]
+        },
+        {
+            "name": "Train PIQN: CONLL03 (flat)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "piqn.py",
+            "console": "integratedTerminal",
+            "args": [ "train", "--config", "configs/conll03-flat.conf" ]
+        },
+        {
+            "name": "Train PIQN: FEWNERD (flat)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "piqn.py",
+            "console": "integratedTerminal",
+            "args": [ "train", "--config", "configs/fewnerd-flat.conf" ]
+        }
+        {
+            "name": "Train PIQN: ACE2004 (nested)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "piqn.py",
+            "console": "integratedTerminal",
+            "args": [ "train", "--config", "configs/nested.conf" ]
+        },
+        {
+            "name": "Train PIQN: Genia (nested)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "piqn.py",
+            "console": "integratedTerminal",
+            "args": [ "train", "--config", "configs/nested.conf.genia" ]
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Convert Json files to Spacy",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "preprocess-data",
+            "args": ["../data/ocie/train/cvs",
+             "../data/ocie/dev/cvs",
+             "../data/ocie-transformers/train/cvs",
+             "../data/ocie-transformers/dev/cvs",
+              "10"]
+        },
+        {
+            "name": "Train (CNN)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "train-models",
+            "args": ["../data/ocie/train/cvs",
+             "../data/ocie/test/cvs",
+              "10"]
+        },
+        {
+            "name": "Train (Transformers)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "train-models",
+            "args": ["../data/ocie-transformers/train/cvs",
+             ".../data/ocie-transformers/dev/cvs",
+              "10", "config-trf-2.cfg"]
+        },
+        {
+            "name": "Evaluate (CNN)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "evaluate-models",
+            "args": ["../data/ocie/train/cvs",
+             "../data/expected/cvs",
+              "../data/ocie/results", "10"]
+        },
+        {
+            "name": "Evaluate (Transformers)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "evaluate-models",
+            "args": ["../data/ocie-transformers/train/cvs",
+             "../data/expected/cvs",
+              "../data/ocie-transformers/results", "10"]
+        }
+    ]
+}

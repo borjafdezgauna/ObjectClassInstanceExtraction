@@ -1,0 +1,86 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Initialization: preprocess data (all)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "preprocess_data.py",
+            "console": "integratedTerminal",
+            "args": [ "preprocess", "--model", "all" ]
+        },
+        {
+            "name": "Compare files",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "preprocess_data.py",
+            "console": "integratedTerminal",
+            "args": [ "compare" ]
+        },
+        {
+            "name": "Initialization: preprocess data (OCIE)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "preprocess_data.py",
+            "console": "integratedTerminal",
+            "args": [ "preprocess", "--model", "ocie" ]
+        },
+        {
+            "name": "Initialization: preprocess Diffusion-NER",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "preprocess_data.py",
+            "console": "integratedTerminal",
+            "args": [ "preprocess", "--model", "diffusion-ner" ]
+        },
+        {
+            "name": "Measure performance (OCIE)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "measure_performance.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--expected-folder",
+                "data/expected/cvs",
+                "--actual-folder",
+                "data/ocie/results/cvs",
+                "--num-folds", "10",
+                "--stats-output-folder",
+                "data/ocie/stats-cvs" ]
+        },
+        {
+            "name": "Measure performance (OCIE-Transformers)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "measure_performance.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--expected-folder",
+                "data/expected/cvs",
+                "--actual-folder",
+                "data/ocie-transformers/results/cvs",
+                "--num-folds", "10",
+                "--stats-output-folder",
+                "data/ocie-transformers/stats-cvs" ]
+        },
+        {
+            "name": "Measure performance (CNN-NER)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "measure_performance.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--expected-folder",
+                "data/expected/cvs",
+                "--actual-folder",
+                "data/cnn-ner/results/cvs",
+                "--num-folds", "10",
+                "--stats-output-folder",
+                "data/cnn-ner/stats-cvs" ]
+        }
+
+    ]
+}
