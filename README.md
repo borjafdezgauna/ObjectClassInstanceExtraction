@@ -1,9 +1,7 @@
 # Object Class Instance Extraction (OCIE)
-(Borja Fernández-Gauna)
+(Borja Fernández-Gauna et al.)
 
-In this repository, I have put together some Nested-NER algorithms to compare their performance extracting object class instances from text.
-
-So far, OCIE and CNN-Nested-NER work. I am working on Diffusion-NER and PIQN right now (both cloned and adapted from https://github.com/tricktreat).
+In this repository, we have put together the code used for the paper "Object Class Instance Extraction": it features some Nested-NER algorithms to compare their performance extracting object class instances from text with our proposal (OCIE).
 
 The papers of these algorithms are in the 'papers' folder
 
