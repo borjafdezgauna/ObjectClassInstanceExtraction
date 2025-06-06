@@ -28,14 +28,13 @@ Some of the algorithms use packages that require Python 3.12, others require 3.8
 
 _In some of the scripts, the number of workers is hardcoded to 50. Set it lower if your machine has less cores._
 
-1. Download and preprocess data
+1. Preprocess data
 
     The common/shared code is in the main folder. Open it from VS Code to run the initialization scripts:
 
-    1. Download data from Zenodo (Run and debug -> Initialization: download data from Zenodo)
-    2. Preprocess data (Run and debug -> Initialization: preprocess data (all))
+    1. Preprocess data (Run and debug -> Initialization: preprocess data (all))
 
-    These two steps should download two data files and convert them to the different formats used by the different algorithms (in the folder 'data')
+    This should convert the xml file in data/xml to the different formats used by the different algorithms (in the folder 'data')
 
 2. Run OCIE
 
